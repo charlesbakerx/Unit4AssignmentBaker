@@ -11,17 +11,18 @@ then output a message with the count of how many loops were done.
 using namespace std;
 
 int main() {
+  string promptString = "Please enter a number with or without decimals (Not 0): ";
   double formula1, formula2, formula3, formula4, input;
   int counter = 0;
 
   do {
-    input = validateDouble(input);
+    input = validateDouble(input, promptString);
     // Check if input matches our exit code and break out if it does.
     if (input == -1)
       break;
     // Check if input is 0 so we don't get a division by 0 error and continue the loop if it is.
     else if (input == 0) {
-      cout << "Can not divide by 0. Please enter a different number" << endl;
+      cout << "Can not divide by 0! Please enter a different number." << endl;
       continue;
     }
 

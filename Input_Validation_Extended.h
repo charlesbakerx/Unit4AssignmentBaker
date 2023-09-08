@@ -6,10 +6,10 @@
 using namespace std; 
 
 //Function Prototypes
-int validateInt(int &); //use the validation method to vaildate and return a data type integer pass by reference &
-double validateDouble(double &); //use the validation method to vaildate and return a data type double pass by reference &
-char validateChar(char &); //use the validation method to vaildate and return a data type char pass by reference &
-string validateString(string &); //use the validation method to vaildate and return a data type string pass by reference &
+int validateInt(int &, string promptString); //use the validation method to vaildate and return a data type integer pass by reference &
+double validateDouble(double &, string promptString); //use the validation method to vaildate and return a data type double pass by reference &
+char validateChar(char &, string promptString); //use the validation method to vaildate and return a data type char pass by reference &
+string validateString(string &, string promptString); //use the validation method to vaildate and return a data type string pass by reference &
 
 template <typename T>
 T getValidatedInput()
@@ -41,11 +41,11 @@ T getValidatedInput()
 }
 
 //Function Definitions
-int validateInt(int &intInput)
+int validateInt(int &intInput, string promptString)
 {
 	while (true)
     {
-        cout << "Enter an integer: ";
+        cout << promptString;
 
         try
         {
@@ -63,11 +63,11 @@ int validateInt(int &intInput)
     return intInput; 
 }
 
-double validateDouble(double &doubleInput)
+double validateDouble(double &doubleInput, string promptString)
 {
 	while (true)
     {
-        cout << "Enter a number with or without decimals (double): ";
+        cout << promptString;
 
         try
         {
@@ -85,11 +85,11 @@ double validateDouble(double &doubleInput)
     return doubleInput; 
 }
 
-char validateChar(char &charInput)
+char validateChar(char &charInput, string promptString)
 { 
     while (true)
     {
-        cout << "Enter a single letter or number (1 digit): ";
+        cout << promptString;
 
         try
         {
@@ -107,11 +107,11 @@ char validateChar(char &charInput)
     return charInput; 
 }
 
-string validateString(string &stringInput)
+string validateString(string &stringInput, string promptString)
 {
     while (true) //use cin, getline() for this 
     {
-        cout << "Enter a word (no spaces): ";
+        cout << promptString;
 
         try
         {
