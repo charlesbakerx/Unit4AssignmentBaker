@@ -11,7 +11,8 @@ then output a message with the count of how many loops were done.
 using namespace std;
 
 int main() {
-  string promptString = "Please enter a number with or without decimals (Not 0): ";
+  string promptString =
+      "Please enter a number with or without decimals (Not 0): ";
   double formula1, formula2, formula3, formula4, input;
   int counter = 0;
 
@@ -20,7 +21,8 @@ int main() {
     // Check if input matches our exit code and break out if it does.
     if (input == -1)
       break;
-    // Check if input is 0 so we don't get a division by 0 error and continue the loop if it is.
+    // Check if input is 0 so we don't get a division by 0 error and continue
+    // the loop if it is.
     else if (input == 0) {
       cout << "Can not divide by 0! Please enter a different number." << endl;
       continue;
@@ -36,7 +38,8 @@ int main() {
     cout << input << " * " << input << " = " << formula1 << endl;
     cout << input << " / " << input << " = " << formula2 << endl;
     cout << "(" << input << " + 3) / 5 = " << formula3 << endl;
-    cout << "((" << input << " + 3) / 5) + ((" << input << " + 7) / 2) = " << formula4 << endl;
+    cout << "((" << input << " + 3) / 5) + ((" << input
+         << " + 7) / 2) = " << formula4 << endl;
 
     // Increment our counter.
     counter++;
@@ -44,4 +47,6 @@ int main() {
   while (input != -1);
 
   cout << "Exiting loop. You looped " << counter << " times!";
+
+  return 0;
 }
