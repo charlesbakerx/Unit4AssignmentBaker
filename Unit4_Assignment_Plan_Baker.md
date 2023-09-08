@@ -11,7 +11,8 @@
   - When the program exits output the value of the counter.
 
 ### Variable Declarations
-
+  - double formula1, formula2, formula3, formula4
+  - int counter
 
 ### Input
 
@@ -20,3 +21,5 @@
 ### Output
 
 ### Error Conditions
+  - User entering a non-numeric would result in an error
+  - User entering a 0 would result in a division error in formula 2
