@@ -11,14 +11,21 @@
   - When the program exits output the value of the counter.
 
 ### Variable Declarations
-  - double formula1, formula2, formula3, formula4
+  - double formula1, formula2, formula3, formula4, input
   - int counter
 
 ### Input
+  - Take a validatedDouble from the user and store it in input
 
 ### Processing
+  - formula1 = (input * input);
+  - formula2 = (input / input);
+  - formula3 = (input + 3) / 5;
+  - formula4 = ((input + 3) / 5) + ((input + 7) / 2);
 
 ### Output
+  - Output all processes to the console with respective messages
+  - On exit output counter to console with a message
 
 ### Error Conditions
   - User entering a non-numeric would result in an error
